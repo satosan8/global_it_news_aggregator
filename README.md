@@ -27,7 +27,7 @@ Features
 
  📷 Demo
 
-Demo of Global IT News Aggregator (demo.gif)
+Demo of Global IT News Aggregator (demo.gif.gif)
 
 
  ⚙️ Technologies & Stack
