@@ -2,14 +2,14 @@ import streamlit as st
 import pandas as pd
 import feedparser
 
-# ---------- PAGE CONFIG ----------
+
 st.set_page_config(
     page_title="Global IT News Aggregator",
     page_icon="💻",
     layout="wide"
 )
 
-# ---------- HEADER ----------
+#head
 col_title, col_search = st.columns(2)
 
 with col_title:
@@ -21,7 +21,7 @@ with col_search:
 
 st.markdown("---")
 
-# ---------- RSS FETCHING ----------
+# RSS
 @st.cache_data(ttl=300)
 def get_all_news():
     feeds = [
@@ -60,23 +60,23 @@ def get_all_news():
 
     return pd.DataFrame(articles)
 
-# ---------- LOAD DATA ----------
+# load data
 with st.spinner("Loading news..."):
     df = get_all_news()
 
-# ---------- ERROR STATE ----------
+# if error
 if df.empty:
     st.error("Error loading news. Please try again later.")
 
 else:
-    # ---------- FILTER ----------
+    # filter
     if keyword:
         df = df[
             df["Title"].str.lower().str.contains(keyword, na=False) |
             df["Site"].str.lower().str.contains(keyword, na=False)
         ]
 
-    # ---------- DISPLAY ----------
+    # display
     if not df.empty:
         for site, group in df.groupby("Site"):
             st.subheader(site)
@@ -86,7 +86,7 @@ else:
     else:
         st.info("No news found for your request.")
 
-# ---------- REFRESH ----------
+# refresh button
 st.markdown("---")
 if st.button("Refresh News"):
     st.cache_data.clear()
