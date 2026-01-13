@@ -1,44 +1,45 @@
-# 💻 Global IT News Aggregator
+💻 Global IT News Aggregator
 
-**Global IT News Aggregator** — это веб-приложение на Python и Streamlit, которое собирает свежие новости из популярных IT-источников и позволяет фильтровать их по ключевым словам.  
-Проект создан как портфолио Nazmi Jor.
+A portfolio project by Nazmi Jor.
 
----
+ Overview
 
-## Основные возможности
+Global IT News Aggregator is a web application built with Streamlit that collects and displays the latest IT and technology news from multiple global sources.  
+The app provides a clean interface, keyword-based filtering, and fast data loading using RSS feeds.
 
-- Сбор новостей через **RSS-ленты** (стабильно, без JavaScript):
+This project was created as a portfolio project to demonstrate practical Python skills, working with external data sources, and building interactive web applications.
+
+
+
+Features
+
+- Aggregates news using "RSS feeds" (stable, no JavaScript required):
   - Hacker News  
   - TechCrunch  
   - The Verge  
-  - Habr 🇷🇺
-- Фильтрация новостей по ключевым словам.
-- Интуитивный и чистый интерфейс на Streamlit.
-- Кэширование новостей для ускорения загрузки.
-- Кнопка **Refresh News** для обновления ленты.
+  - Habr
+- Keyword-based news filtering
+- Clean and intuitive Streamlit interface
+- Cached data for faster load times
+- "Refresh News" button to manually update the feed
 
----
 
-## 📷 Demo
 
-![Demo of Global IT News Aggregator](demo.gif)
+ 📷 Demo
 
-*GIF показывает интерфейс приложения, фильтрацию новостей по ключевым словам и работу кнопки Refresh.*
+Demo of Global IT News Aggregator (demo.gif)
 
----
 
-## ⚙️ Технологии и стек
+ ⚙️ Technologies & Stack
 
-- **Python 3.11+**
-- **Streamlit** — веб-интерфейс
-- **Pandas** — работа с таблицами данных
-- **Feedparser** — парсинг RSS-лент
+1. Python 3.11+
+2. Streamlit - web application framework
+3. Pandas - data manipulation
+4. Feedparser - RSS feed parsing
 
----
+How to Run the Project Locally
 
-##  Как запустить проект
-
-### 1. Клонируем репозиторий:
-```bash
-git clone https://github.com/yourusername/global-it-news-aggregator.git
-cd global-it-news-aggregator
+1. Clone the repository
+bash
+git clone https://github.com/satosan8/global_it_news_aggregator.git
+cd global_it_news_aggregator
